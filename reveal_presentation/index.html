@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -34,6 +34,12 @@
 			background-repeat: no-repeat;
 			background-position: 95% 100%;
 		   }
+           
+		   /*override the themes border*/
+		   .reveal section div img {
+			border: 0px;
+			width: 400px;
+		   }
  	       </style>
 
 
@@ -46,11 +52,95 @@
 
 				<section><!--------------------------------- slide -------------------------------->
 					<h1>Leap into Linux!</h1>
-					<h3>Your first operating sytem install: Ubermix</h3>
-					<p>
-						<small>LinuxCon North America 2016 Kids Day</small>
-					</p>
+					<div><img src="ubermix_logo.png"/></div>
+					<h4>LinuxCon North America 2016 Kids Day</h4>
 				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<h2>What you will need</h2>
+					<div>
+						<img src="aurium-Laptop-in-Line-Art.svg"/>
+					 	<img src="lmproulx-USB-Key.svg"/>
+					</div>
+				</section>
+
+
+				<section><!--------------------------------- slide -------------------------------->
+					<h2>Get into the Boot Menu</h2>
+					<ol start="0">
+ 						<li class="fragment">Plug the USB into a port</li>
+						<li class="fragment">Restart the computer</li>
+						<li class="fragment">When the first screen appears, press F12</li>
+					</ol>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<p>You should now be looking at the Boot Menu</p>
+					<img src="bootmenu.jpg"/>
+				</section>
+
+
+				<section><!--------------------------------- slide -------------------------------->
+					<h2>In the Boot Menu</h2>
+					<ol start="3">
+						<li class="fragment">Press the arrow-down key until USB is selected</li>
+						<li class="fragment">Press the Enter key</li>
+					</ol>
+				</section>
+
+				<section data-markdown><!--------------------------------- slide -------------------------------->
+					<script type="text/template">
+						<section data-markdown>
+
+				Please select an option, or press ENTER to exit:
+
+				1. Easy image system using ubermix version 2.31L
+				2. Advanced image
+				3. Apply simple updates files
+				4. Fast Image
+				5. Export options	
+
+						</section>
+						<br><br><br><br><br>
+						<ul>
+							<li>Select 1, and press ENTER</li>
+							<li>When prompted, type yes</li>
+						</ul>
+					</script>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<h2>Ubermix is now installing \o/</h2>
+					<br><br>
+					<h2 class="fragment">This will take a few minutes.</h2>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<h3>When the imaging process is complete,</h3>
+					<br><br>
+					<h3>you will be prompted to press any key to continue.</h3>
+				</section>
+
+
+				<section data-markdown><!--------------------------------- slide -------------------------------->
+					<script type="text/template">
+						You will be brought back to this screen:
+						<section data-markdown>
+
+				Please select an option, or press ENTER to exit:
+
+				1. Easy image system using ubermix version 2.31L
+				2. Advanced image
+				3. Apply simple updates files
+				4. Fast Image
+				5. Export options
+
+						</section>
+						<br><br><br><br><br>
+						<p>Press ENTER to reboot the computer.</p>
+				    	</script>
+				</section>
+
 
 
 
