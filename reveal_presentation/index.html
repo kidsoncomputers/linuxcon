@@ -27,19 +27,30 @@
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 
+	       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
                <style>
+		
 		   body {
 			background-image: url('koc_logo.svg');
 			background-repeat: no-repeat;
 			background-position: 95% 100%;
 		   }
-           
+
 		   /*override the themes border*/
 		   .reveal section div img {
-			border: 0px;
-			width: 400px;
+			border: none;
+			width: 300px;
 		   }
+
+		   .reveal section div img#slide1 {
+			width: 100%;
+		   }
+
+		   body #slide1-section {
+			background: none;
+		   }
+
  	       </style>
 
 
@@ -50,12 +61,103 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section><!--------------------------------- slide -------------------------------->
-					<h1>Leap into Linux!</h1>
-					<div><img src="ubermix_logo.png"/></div>
-					<h4>LinuxCon North America 2016 Kids Day</h4>
+				<section id="slide1-section"><!------------ slide -------------------------------->
+					<div><img id="slide1" src="koc_logo.svg"/></div>
 				</section>
 
+				<section><!--------------------------------- slide -------------------------------->
+					<h1>Welcome</h1>
+					<ul>
+					  <li class="fragment">Today you will learn to setup a computer by installing a custom operating system<br><br></li>
+					  <li class="fragment">By doing this, you will also be helping kids in Mexico who do not have computers</li>
+					</ul>
+				</section>
+
+				<section><!------------ slide -------------------------------->
+					<div><img id="slide1" src="kids_large.jpg"/></div>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<h2>Who are we?</h2>
+					<ul>
+					  <li class="fragment">KOC  Kids on Computers<br><br></li>
+					  <li class="fragment">A non-profit organization made up of a group of volunteers — adults and kids<br><br></li>
+				          <li class="fragment">Founded in 2006</li>
+					</ul>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+	 				<figure>
+			 			 <img src="volunteers.jpg" alt="photo of KOC volutnteers" width=80%>
+  						 <figcaption>KOC Volunteers</figcaption>
+					</figure> 
+				</section>
+				<section><!--------------------------------- slide -------------------------------->
+					<h2>What we do</h2>
+					<ul>
+					  <li class="fragment">We set up computer labs in countries where kids don't have access to technology<br><br></li>
+					  <li class="fragment">These computers have FOSS installed on them</li>
+					</ul>				
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<figure>
+						<img src="computers.jpg" alt="photo of computer lab" width=80%>
+						<figcaption>Laptops with Ubermix installed</figcaption>
+					</figure>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+					<figure>
+						<img src="lab_with_kids_1.jpg" alt="photo of computer lab" width=100%>
+					</figure>
+				</section>
+
+
+				<section><!--------------------------------- slide -------------------------------->
+					<figure>
+						<img src="lab_with_kids_2.jpg" alt="photo of computer lab" width=100%>
+					</figure>
+				</section>
+
+
+				<section><!--------------------------------- slide -------------------------------->
+					<figure>
+						<img src="lab_with_kids_4.jpg" alt="photo of computer lab" width=100%>
+					</figure>
+				</section>
+
+
+				<section><!--------------------------------- slide -------------------------------->
+					<figure>
+						<img src="outside_school_picture.jpg" alt="photo of computer lab" width=100%>
+					</figure>
+				</section>
+
+				<section><!--------------------------------- slide -------------------------------->
+				<p>We could use your help with computers or money and we are always looking for more volunteers.</p><br><br><p>We take donations and we are always looking for help from people like you who like to work with technology.</p>
+				</section>
+				
+				<section><!--------------------------------- slide -------------------------------->
+                                	<p>We  have 20 computer labs in Mexico, India, Morocco, Nepal, and Argentina.</p><br><br>
+					<p>In Oaxaca alone, there are 12 labs. This summer we set up 2 new labs.  One of them with Raspberry Pi's, the other with Ubermix.<br><br></p>
+					<p>We are currently working on additional labs in Mexico.</p>	
+				</section>
+
+				<section>
+					<p>Today we will install Ubermix, Arduino IDE and Ardublocks on our computers.</p>
+					<br><br>
+					<p>We will then use them this afternoon with MakerKids</p>
+					<br><br>
+					<p>Once we are done, Spanish language packs will be installed onto the system, and the computers will go to Mexico!</p>
+				</section>
+					
+				<section>	
+					<p>So, without further ado.... Let's get started!</p>
+				</section>	
+
+
+				
 				<section><!--------------------------------- slide -------------------------------->
 					<h2>What you will need</h2>
 					<div>
@@ -111,7 +213,11 @@
 
 				<section><!--------------------------------- slide -------------------------------->
 					<h2>Ubermix is now installing \o/</h2>
-					<br><br>
+					<br>
+					<figure>
+						<img src="ubermix_logo.png" alt="ubermix logo">
+					</figure>
+					<br>
 					<h2 class="fragment">This will take a few minutes.</h2>
 				</section>
 
@@ -139,11 +245,10 @@
 						<br><br><br><br><br>
 						<p>Press ENTER to reboot the computer.</p>
 				    	</script>
-				</section>
+			</section>
 
 
-
-
+		
 			</div><!-- slides -->
 		</div><!-- reveal -->
 
@@ -172,7 +277,15 @@
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
+   					$( document ).ready(function() {
+    						console.log( "ready!" );
+						var slide1Visible = $('#slide1-section').css('opacity');
+						console.log(slide1Visible);
+						if (slide1Visible) {
+							console.log("in here");
+							 $("body").css('background-image', 'none');
+						}
+					});
 		</script>
 
 	</body>
